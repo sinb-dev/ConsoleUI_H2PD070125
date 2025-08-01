@@ -7,8 +7,17 @@ public abstract class ContainerBase : UIElement
     {
 
     }
+    public int GetWidth()
+    {
+        return 50;
+    }
+
     public void AddChild(UIElement element)
     {
+        if (element is ControlBase)
+        {
+            ControlBase.AllControls.Add((ControlBase) element);
+        }
         _children.Add(element);
     }
 } //ContainerBase.cs

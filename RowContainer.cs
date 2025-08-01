@@ -5,6 +5,10 @@ public class RowContainer : ContainerBase
     {
 
     }
+    public new int GetWidth()
+    {
+        return Console.BufferWidth;
+    }
     public override void Render()
     {
         ConsoleColor background = Console.BackgroundColor;
