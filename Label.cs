@@ -1,6 +1,6 @@
 namespace ConsoleUI;
 
-public class Label
+public class Label : UIElement
 {
     public string Content = "";
     public Label()
@@ -11,7 +11,7 @@ public class Label
     {
         Content = content;
     }
-    public void Render()
+    public override void Render()
     {
         Console.Write(Content);
     }

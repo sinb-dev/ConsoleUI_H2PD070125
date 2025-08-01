@@ -6,4 +6,6 @@ Console.CursorTop = 10;
 Label label = new Label("Hello Label");
 label.Render();
 new Button("Useless button").Render();
+Label lastLabel = new Label("Hello Label");
+lastLabel.Render();
 Console.ReadKey();

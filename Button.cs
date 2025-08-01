@@ -1,5 +1,5 @@
 namespace ConsoleUI;
-public class Button
+public class Button : UIElement
 {
     public string Content = "";
     public Button()
@@ -10,7 +10,7 @@ public class Button
     {
         Content = content;
     }
-    public void Render()
+    public override void Render()
     {
         Console.BackgroundColor = ConsoleColor.DarkBlue;
         Console.ForegroundColor = ConsoleColor.White;
