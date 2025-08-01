@@ -10,6 +10,12 @@ public class Button : UIElement
     {
         Content = content;
     }
+
+    public override (int Width, int Height) GetSize()
+    {
+        return (Content.Length, 1);
+    }
+
     public override void Render()
     {
         Console.BackgroundColor = ConsoleColor.DarkBlue;
