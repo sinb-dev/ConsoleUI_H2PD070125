@@ -9,8 +9,14 @@ public class RowContainer : ContainerBase
     {
         return Console.BufferWidth;
     }
+    
     public override void Render()
     {
+        Render(Console.BufferWidth,Console.BufferHeight);
+    }
+    public override void Render(int maxWidth, int maxHeight)
+    {
+        
         ConsoleColor background = Console.BackgroundColor;
         ConsoleColor foreground = Console.ForegroundColor;
         

@@ -7,6 +7,10 @@ public class ColumnContainer : ContainerBase
     }
     public override void Render()
     {
+        Render(Console.BufferWidth,Console.BufferHeight);
+    }
+    public override void Render(int maxWidth, int maxHeight)
+    {
         ConsoleColor background = Console.BackgroundColor;
         ConsoleColor foreground = Console.ForegroundColor;
         
@@ -14,7 +18,7 @@ public class ColumnContainer : ContainerBase
         int offsetY = Console.CursorTop;
         foreach (UIElement child in _children)
         {
-            child.Render();
+            child.Render(maxWidth, maxHeight);
             var size = child.GetSize();
             offsetY += size.Height; //diff
             

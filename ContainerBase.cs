@@ -5,7 +5,7 @@ public abstract class ContainerBase : UIElement
     protected List<UIElement> _children = new();
     public ContainerBase()
     {
-
+        
     }
     public int GetWidth()
     {
